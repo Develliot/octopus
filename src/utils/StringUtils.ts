@@ -1,4 +1,4 @@
-export const camelCaseToCaptilalisedCase = (text: string): string => {
+export const camelCaseToCapitalisedCase = (text: string): string => {
     const result = text.replace(/([A-Z])/g, ' $1').trim();
     return result.charAt(0).toUpperCase() + result.slice(1);
 };
