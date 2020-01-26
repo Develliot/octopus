@@ -14,3 +14,8 @@ export type ProductType = {
         colour: string;
     };
 };
+
+export type ProductQuantityType = {
+    product: ProductType;
+    quantity: number;
+};

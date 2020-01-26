@@ -1,4 +1,4 @@
-import { useState, useContext, memo } from 'react';
+import { useState, useContext, useEffect, memo, useRef } from 'react';
 
 import { BasketContext } from 'src/contexts/BasketContext';
 import { BasketReducer } from 'src/reducers/BasketReducer';
@@ -32,8 +32,8 @@ type Props = {
 const MIN_QUANTITY = 1;
 
 export const Product = ({
+    product,
     product: {
-        id,
         imageUrl,
         title,
         wattage,
@@ -44,7 +44,21 @@ export const Product = ({
     },
 }: Props) => {
     const [count, setCount] = useState(MIN_QUANTITY);
+    const [hasBeenAddedToBasket, setHasBeenAddedToBasket] = useState(false);
     const [state, setState] = useContext(BasketContext);
+    const ref = useRef();
+
+    // turn has been added to basket off after a few seconds
+    useEffect(() => {
+        if (hasBeenAddedToBasket) {
+            setTimeout(() => {
+                // we need to check ref incase component unmounts during timeout
+                if (carouselRef?.current) {
+                    setHasBeenAddedToBasket(false);
+                }
+            }, 3000);
+        }
+    }, [ref, hasBeenAddedToBasket, setHasBeenAddedToBasket]);
 
     const handleQuantityChanged = (value: number) => {
         setCount(value);
@@ -53,9 +67,10 @@ export const Product = ({
     const handleAddToCart = () => {
         const newState = BasketReducer(state, {
             type: 'addProducts',
-            payload: { id: id, value: count },
+            payload: { product: product, value: count },
         });
         setState(newState);
+        setHasBeenAddedToBasket(true);
     };
 
     return (
@@ -98,7 +113,13 @@ export const Product = ({
                     >
                         Add to cart
                     </Button>
-                    <VerticalSpacer size='large' />
+                    <VerticalSpacer size='large'>
+                        {hasBeenAddedToBasket && (
+                            <Paragraph textAlign='center' color='pink'>
+                                ...added to basket
+                            </Paragraph>
+                        )}
+                    </VerticalSpacer>
                 </ContentWrapper>
             </ColorBlock>
             <ColorBlock>
@@ -114,26 +135,28 @@ export const Product = ({
                     <H2>Specifications</H2>
                     <VerticalSpacer size='medium' />
                     <SpecTable>
-                        <SpecRow>
-                            <td>Brand</td>
-                            <td>{specifications.brand}</td>
-                        </SpecRow>
-                        <SpecRow>
-                            <td>Item weight</td>
-                            <td>{specifications.weight}</td>
-                        </SpecRow>
-                        <SpecRow>
-                            <td>Dimensions</td>
-                            <td>{specifications.dimensions}</td>
-                        </SpecRow>
-                        <SpecRow>
-                            <td>Item model number</td>
-                            <td>{specifications.modelNumber}</td>
-                        </SpecRow>
-                        <SpecRow>
-                            <td>Colour</td>
-                            <td>{specifications.colour}</td>
-                        </SpecRow>
+                        <tbody>
+                            <SpecRow>
+                                <td>Brand</td>
+                                <td>{specifications.brand}</td>
+                            </SpecRow>
+                            <SpecRow>
+                                <td>Item weight</td>
+                                <td>{specifications.weight}</td>
+                            </SpecRow>
+                            <SpecRow>
+                                <td>Dimensions</td>
+                                <td>{specifications.dimensions}</td>
+                            </SpecRow>
+                            <SpecRow>
+                                <td>Item model number</td>
+                                <td>{specifications.modelNumber}</td>
+                            </SpecRow>
+                            <SpecRow>
+                                <td>Colour</td>
+                                <td>{specifications.colour}</td>
+                            </SpecRow>
+                        </tbody>
                     </SpecTable>
                 </ContentWrapper>
             </ColorBlock>

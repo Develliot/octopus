@@ -5,14 +5,14 @@ import React, {
     SetStateAction,
 } from 'react';
 
+import { ProductQuantityType } from 'src/types';
+
 export type BasketContextStateType = {
-    basket: {
-        [key: string]: number;
-    };
+    basket: ProductQuantityType[];
 };
 
 const defaultState: BasketContextStateType = {
-    basket: {},
+    basket: [],
 };
 
 export type BasketProviderType = [
@@ -22,7 +22,7 @@ export type BasketProviderType = [
 
 export const BasketContext = React.createContext<BasketProviderType>([
     { ...defaultState },
-    () => {},
+    () => [],
 ]);
 
 // making a provider HOC here so I can keep all the state code in this

@@ -1,57 +1,152 @@
 import { BasketReducer } from '../BasketReducer';
 
+const mockProduct = {
+    id: 1,
+    title: 'Energy saving light bulb',
+    wattage: 25,
+    packetSize: 4,
+    price: 12.99,
+    description:
+        'Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!',
+    imageUrl: 'https://picsum.photos/500/500',
+    specifications: {
+        brand: 'Philips',
+        weight: '77g',
+        dimensions: '12.6x6.2x6.2cm',
+        modelNumber: 'E27 ES',
+        colour: 'Cool daylight',
+    },
+};
+
+const mockProduct2 = {
+    id: 2,
+    title: 'Incandescent light bulb',
+    wattage: 40,
+    packetSize: 2,
+    price: 4.99,
+    description:
+        'Available in 40 watts, 60 watts, burn your retinas out with these retro looking bad boys, heat your room and empty your wallet as the same time. Sit back and remember the good old days when light bulbs would frequently pop.',
+    imageUrl: 'https://picsum.photos/500/500',
+    specifications: {
+        brand: 'Acme',
+        weight: '64g',
+        dimensions: '10.6x6.2x6.2cm',
+        modelNumber: 'E27 INC',
+        colour: 'warm white',
+    },
+};
+
 describe('BasketReducer', () => {
     it('adds a new products to an empty basket', () => {
         expect(
             BasketReducer(
-                { basket: {} },
-                { type: 'addProducts', payload: { id: 7, value: 4 } }
+                { basket: [] },
+                {
+                    type: 'addProducts',
+                    payload: { product: mockProduct, value: 4 },
+                }
             )
-        ).toEqual({ basket: { 7: 4 } });
+        ).toEqual({ basket: [{ product: mockProduct, quantity: 4 }] });
     });
 
-    it('adds a single products if no quantity value is specified', () => {
+    it('increments quantity by one if no quantity value is specified', () => {
         expect(
             BasketReducer(
-                { basket: {} },
-                { type: 'addProducts', payload: { id: 7 } }
+                {
+                    basket: [
+                        { product: mockProduct, quantity: 4 },
+                        { product: mockProduct2, quantity: 4 },
+                    ],
+                },
+                { type: 'addProducts', payload: { product: mockProduct } }
             )
-        ).toEqual({ basket: { 7: 1 } });
+        ).toEqual({
+            basket: [
+                { product: mockProduct, quantity: 5 },
+                { product: mockProduct2, quantity: 4 },
+            ],
+        });
     });
 
     it('it removes a set number of products from a basket', () => {
         expect(
             BasketReducer(
-                { basket: { 3: 3 } },
-                { type: 'removeProducts', payload: { id: 3, value: 2 } }
+                {
+                    basket: [
+                        { product: mockProduct, quantity: 4 },
+                        { product: mockProduct2, quantity: 4 },
+                    ],
+                },
+                {
+                    type: 'removeProducts',
+                    payload: { product: mockProduct, value: 2 },
+                }
             )
-        ).toEqual({ basket: { 3: 1 } });
+        ).toEqual({
+            basket: [
+                { product: mockProduct, quantity: 2 },
+                { product: mockProduct2, quantity: 4 },
+            ],
+        });
     });
 
-    it('it removes a single products from a basket when no quantity value is specified', () => {
+    it('it decrements quantity by one when no quantity value is specified', () => {
         expect(
             BasketReducer(
-                { basket: { 3: 3 } },
-                { type: 'removeProducts', payload: { id: 3 } }
+                {
+                    basket: [
+                        { product: mockProduct, quantity: 4 },
+                        { product: mockProduct2, quantity: 4 },
+                    ],
+                },
+                {
+                    type: 'removeProducts',
+                    payload: { product: mockProduct },
+                }
             )
-        ).toEqual({ basket: { 3: 2 } });
+        ).toEqual({
+            basket: [
+                { product: mockProduct, quantity: 3 },
+                { product: mockProduct2, quantity: 4 },
+            ],
+        });
     });
 
-    it('it removes all products from the basket when requested', () => {
+    it('it removes entire product entry from the basket when all exiting quantity is removed', () => {
         expect(
             BasketReducer(
-                { basket: { 3: 3 } },
-                { type: 'removeProducts', payload: { id: 3, value: 3 } }
+                {
+                    basket: [
+                        { product: mockProduct, quantity: 4 },
+                        { product: mockProduct2, quantity: 4 },
+                    ],
+                },
+                {
+                    type: 'removeProducts',
+                    payload: { product: mockProduct, value: 4 },
+                }
             )
-        ).toEqual({ basket: {} });
+        ).toEqual({
+            basket: [{ product: mockProduct2, quantity: 4 }],
+        });
     });
 
-    it('it removes all the same products from the basket when a quantity greater than what exists is used', () => {
+    it('it removes entire product entry from the basket when more than exiting quantity is removed', () => {
         expect(
             BasketReducer(
-                { basket: { 3: 3, 5: 7 } },
-                { type: 'removeProducts', payload: { id: 3, value: 7 } }
+                {
+                    basket: [
+                        { product: mockProduct, quantity: 4 },
+                        { product: mockProduct2, quantity: 4 },
+                    ],
+                },
+                {
+                    type: 'removeProducts',
+                    payload: { product: mockProduct, value: 7 },
+                }
             )
-        ).toEqual({ basket: { 5: 7 } });
+        ).toEqual({
+            basket: [{ product: mockProduct2, quantity: 4 }],
+        });
     });
 });
