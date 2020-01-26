@@ -14,6 +14,7 @@ import {
 } from 'src/components/Layout';
 import Price from 'src/components/Price';
 import QuantityCounter from 'src/components/QuantityCounter';
+import ShowMore from 'src/components/ShowMore';
 
 import {
     CoverColor,
@@ -53,7 +54,7 @@ export const Product = ({
         if (hasBeenAddedToBasket) {
             setTimeout(() => {
                 // we need to check ref incase component unmounts during timeout
-                if (ref?.current) {
+                if (ref) {
                     setHasBeenAddedToBasket(false);
                 }
             }, 3000);
@@ -129,7 +130,9 @@ export const Product = ({
                 <ContentWrapper>
                     <H2>Description</H2>
                     <VerticalSpacer size='medium' />
-                    <Paragraph>{description}</Paragraph>
+                    <ShowMore color='blue' closeHeight='4em'>
+                        <Paragraph ellipsis={true}>{description}</Paragraph>
+                    </ShowMore>
                 </ContentWrapper>
             </ColorBlock>
 
@@ -137,30 +140,32 @@ export const Product = ({
                 <ContentWrapper>
                     <H2>Specifications</H2>
                     <VerticalSpacer size='medium' />
-                    <SpecTable>
-                        <tbody>
-                            <SpecRow>
-                                <td>Brand</td>
-                                <td>{specifications.brand}</td>
-                            </SpecRow>
-                            <SpecRow>
-                                <td>Item weight</td>
-                                <td>{specifications.weight}</td>
-                            </SpecRow>
-                            <SpecRow>
-                                <td>Dimensions</td>
-                                <td>{specifications.dimensions}</td>
-                            </SpecRow>
-                            <SpecRow>
-                                <td>Item model number</td>
-                                <td>{specifications.modelNumber}</td>
-                            </SpecRow>
-                            <SpecRow>
-                                <td>Colour</td>
-                                <td>{specifications.colour}</td>
-                            </SpecRow>
-                        </tbody>
-                    </SpecTable>
+                    <ShowMore color='darkBlue' closeHeight='4em'>
+                        <SpecTable>
+                            <tbody>
+                                <SpecRow>
+                                    <td>Brand</td>
+                                    <td>{specifications.brand}</td>
+                                </SpecRow>
+                                <SpecRow>
+                                    <td>Item weight</td>
+                                    <td>{specifications.weight}</td>
+                                </SpecRow>
+                                <SpecRow>
+                                    <td>Dimensions</td>
+                                    <td>{specifications.dimensions}</td>
+                                </SpecRow>
+                                <SpecRow>
+                                    <td>Item model number</td>
+                                    <td>{specifications.modelNumber}</td>
+                                </SpecRow>
+                                <SpecRow>
+                                    <td>Colour</td>
+                                    <td>{specifications.colour}</td>
+                                </SpecRow>
+                            </tbody>
+                        </SpecTable>
+                    </ShowMore>
                 </ContentWrapper>
             </ColorBlock>
         </>

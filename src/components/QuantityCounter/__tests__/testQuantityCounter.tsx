@@ -3,8 +3,6 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { QuantityCounter } from '../';
 import { CounterButton, CounterValue } from '../styles';
 
-// not much point testing not visible because snapshot
-// won't capture changes in styled component
 describe('QuantityCounter', () => {
     it('renders correctly', () => {
         const mockOnChangeHandler = jest.fn();

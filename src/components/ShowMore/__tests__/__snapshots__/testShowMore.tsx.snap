@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowMore renders correctly 1`] = `
+<div>
+  <styles__ShowMoreText
+    closeHeight="4em"
+    color="blue"
+    isOpen={true}
+  />
+  <Layout__VerticalSpacer
+    size="small"
+  />
+  <styles__ShowMoreButton
+    onClick={[Function]}
+  >
+    Show less
+  </styles__ShowMoreButton>
+</div>
+`;

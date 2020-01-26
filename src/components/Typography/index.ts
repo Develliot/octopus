@@ -32,6 +32,7 @@ const baseText = (props: BaseTextProps) => `
 
 export const Span = styled.span`
     ${(props: BaseTextProps) => baseText(props)}
+    white-space: ${({ ellipsis }) => (ellipsis ? 'nowrap' : 'wrap')};
 `;
 
 export const Paragraph = styled.p`

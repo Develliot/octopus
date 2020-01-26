@@ -82,9 +82,16 @@ exports[`Product renders correctly with product 1`] = `
       <Layout__VerticalSpacer
         size="medium"
       />
-      <Typography__Paragraph>
-        Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!
-      </Typography__Paragraph>
+      <ShowMore
+        closeHeight="4em"
+        color="blue"
+      >
+        <Typography__Paragraph
+          ellipsis={true}
+        >
+          Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!
+        </Typography__Paragraph>
+      </ShowMore>
     </Layout__ContentWrapper>
   </ColorBlock>
   <ColorBlock
@@ -97,50 +104,55 @@ exports[`Product renders correctly with product 1`] = `
       <Layout__VerticalSpacer
         size="medium"
       />
-      <styles__SpecTable>
-        <tbody>
-          <styles__SpecRow>
-            <td>
-              Brand
-            </td>
-            <td>
-              Philips
-            </td>
-          </styles__SpecRow>
-          <styles__SpecRow>
-            <td>
-              Item weight
-            </td>
-            <td>
-              77g
-            </td>
-          </styles__SpecRow>
-          <styles__SpecRow>
-            <td>
-              Dimensions
-            </td>
-            <td>
-              12.6x6.2x6.2cm
-            </td>
-          </styles__SpecRow>
-          <styles__SpecRow>
-            <td>
-              Item model number
-            </td>
-            <td>
-              E27 ES
-            </td>
-          </styles__SpecRow>
-          <styles__SpecRow>
-            <td>
-              Colour
-            </td>
-            <td>
-              Cool daylight
-            </td>
-          </styles__SpecRow>
-        </tbody>
-      </styles__SpecTable>
+      <ShowMore
+        closeHeight="4em"
+        color="darkBlue"
+      >
+        <styles__SpecTable>
+          <tbody>
+            <styles__SpecRow>
+              <td>
+                Brand
+              </td>
+              <td>
+                Philips
+              </td>
+            </styles__SpecRow>
+            <styles__SpecRow>
+              <td>
+                Item weight
+              </td>
+              <td>
+                77g
+              </td>
+            </styles__SpecRow>
+            <styles__SpecRow>
+              <td>
+                Dimensions
+              </td>
+              <td>
+                12.6x6.2x6.2cm
+              </td>
+            </styles__SpecRow>
+            <styles__SpecRow>
+              <td>
+                Item model number
+              </td>
+              <td>
+                E27 ES
+              </td>
+            </styles__SpecRow>
+            <styles__SpecRow>
+              <td>
+                Colour
+              </td>
+              <td>
+                Cool daylight
+              </td>
+            </styles__SpecRow>
+          </tbody>
+        </styles__SpecTable>
+      </ShowMore>
     </Layout__ContentWrapper>
   </ColorBlock>
 </Fragment>
