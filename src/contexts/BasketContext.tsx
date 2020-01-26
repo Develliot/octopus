@@ -3,6 +3,7 @@ import React, {
     useState,
     Dispatch,
     SetStateAction,
+    useContext,
 } from 'react';
 
 import { ProductQuantityType } from 'src/types';
@@ -24,6 +25,8 @@ export const BasketContext = React.createContext<BasketProviderType>([
     { ...defaultState },
     () => [],
 ]);
+
+export const useBasketContext = () => useContext(BasketContext);
 
 // making a provider HOC here so I can keep all the state code in this
 // and not where ever this provider is used

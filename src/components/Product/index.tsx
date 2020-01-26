@@ -1,6 +1,6 @@
-import { useState, useContext, useEffect, memo, useRef } from 'react';
+import { useState, useEffect, memo, useRef } from 'react';
 
-import { BasketContext } from 'src/contexts/BasketContext';
+import { useBasketContext } from 'src/contexts/BasketContext';
 import { BasketReducer } from 'src/reducers/BasketReducer';
 
 import { Button } from 'src/components/Button';
@@ -45,7 +45,7 @@ export const Product = ({
 }: Props) => {
     const [count, setCount] = useState(MIN_QUANTITY);
     const [hasBeenAddedToBasket, setHasBeenAddedToBasket] = useState(false);
-    const [state, setState] = useContext(BasketContext);
+    const [state, setState] = useBasketContext();
     const ref = useRef();
 
     // hide added to basket message after a few seconds
@@ -99,7 +99,10 @@ export const Product = ({
                 <ContentWrapper>
                     <VerticalSpacer size='small' />
                     <RowStretch>
-                        <Price price={price} />
+                        <div>
+                            <VerticalSpacer size='medium' />
+                            <Price price={price} />
+                        </div>
                         <QuantityCounter
                             minValue={MIN_QUANTITY}
                             onChange={handleQuantityChanged}
@@ -115,7 +118,7 @@ export const Product = ({
                     </Button>
                     <VerticalSpacer size='large'>
                         {hasBeenAddedToBasket && (
-                            <Paragraph textAlign='center' color='pink'>
+                            <Paragraph color='pink'>
                                 ...added to basket
                             </Paragraph>
                         )}

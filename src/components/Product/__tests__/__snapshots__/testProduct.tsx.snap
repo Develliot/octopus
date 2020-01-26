@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product renders correctly with product 1`] = `
+<Fragment>
+  <Layout__RowCenter>
+    <styles__CoverColor>
+      <Layout__RowCenter>
+        <styles__ImageWrapper>
+          <styles__ImageContainer
+            alt="Energy saving light bulb"
+            src="https://picsum.photos/500/500"
+          />
+        </styles__ImageWrapper>
+      </Layout__RowCenter>
+    </styles__CoverColor>
+  </Layout__RowCenter>
+  <ColorBlock
+    padding={false}
+  >
+    <Layout__ContentWrapper>
+      <Layout__VerticalSpacer
+        size="large"
+      />
+      <Typography__H1>
+        Energy saving light bulb
+      </Typography__H1>
+      <Layout__VerticalSpacer
+        size="tiny"
+      />
+      <Typography__Paragraph
+        color="blueGrey"
+      >
+        25W // Packet of 4
+      </Typography__Paragraph>
+    </Layout__ContentWrapper>
+    <Layout__VerticalSpacer
+      size="small"
+    />
+  </ColorBlock>
+  <ColorBlock
+    color="darkBlue"
+    padding={false}
+  >
+    <Layout__ContentWrapper>
+      <Layout__VerticalSpacer
+        size="small"
+      />
+      <Layout__RowStretch>
+        <div>
+          <Layout__VerticalSpacer
+            size="medium"
+          />
+          <Memo(Price)
+            price={12.99}
+          />
+        </div>
+        <QuantityCounter
+          minValue={1}
+          onChange={[Function]}
+        />
+      </Layout__RowStretch>
+      <Layout__VerticalSpacer
+        size="small"
+      />
+      <Button
+        color="pink"
+        isShiny={true}
+        onClick={[Function]}
+      >
+        Add to cart
+      </Button>
+      <Layout__VerticalSpacer
+        size="large"
+      />
+    </Layout__ContentWrapper>
+  </ColorBlock>
+  <ColorBlock>
+    <Layout__ContentWrapper>
+      <Typography__H2>
+        Description
+      </Typography__H2>
+      <Layout__VerticalSpacer
+        size="medium"
+      />
+      <Typography__Paragraph>
+        Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!
+      </Typography__Paragraph>
+    </Layout__ContentWrapper>
+  </ColorBlock>
+  <ColorBlock
+    color="darkBlue"
+  >
+    <Layout__ContentWrapper>
+      <Typography__H2>
+        Specifications
+      </Typography__H2>
+      <Layout__VerticalSpacer
+        size="medium"
+      />
+      <styles__SpecTable>
+        <tbody>
+          <styles__SpecRow>
+            <td>
+              Brand
+            </td>
+            <td>
+              Philips
+            </td>
+          </styles__SpecRow>
+          <styles__SpecRow>
+            <td>
+              Item weight
+            </td>
+            <td>
+              77g
+            </td>
+          </styles__SpecRow>
+          <styles__SpecRow>
+            <td>
+              Dimensions
+            </td>
+            <td>
+              12.6x6.2x6.2cm
+            </td>
+          </styles__SpecRow>
+          <styles__SpecRow>
+            <td>
+              Item model number
+            </td>
+            <td>
+              E27 ES
+            </td>
+          </styles__SpecRow>
+          <styles__SpecRow>
+            <td>
+              Colour
+            </td>
+            <td>
+              Cool daylight
+            </td>
+          </styles__SpecRow>
+        </tbody>
+      </styles__SpecTable>
+    </Layout__ContentWrapper>
+  </ColorBlock>
+</Fragment>
+`;
