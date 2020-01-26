@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price renders correctly with price 1`] = `
+<div>
+  <Layout__VerticalSpacer
+    size="medium"
+  />
+  <styles__Pounds
+    bold={true}
+  >
+    £20
+  </styles__Pounds>
+  <styles__Pence
+    bold={true}
+  >
+    .99
+  </styles__Pence>
+</div>
+`;

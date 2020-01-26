@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 23" aria-labelledby="title-icon-menu" aria-describedby="desc-icon-menu" role="img">
+    <title id="title-icon-menu">A menu icon</title>
+    <desc id="desc-icon-menu">A menu icon</desc>
+    <g fill-rule="evenodd"><rect width="32" height="5" rx="3"></rect><rect y="9" width="32" height="5" rx="3"></rect><rect y="18" width="32" height="5" rx="3"></rect></g>
+</svg>

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component properly 1`] = `
+<footer>
+  <ColorBlock
+    padding={false}
+  >
+    <Layout__ContentWrapper>
+      <Layout__VerticalSpacer
+        size="small"
+      />
+      <Typography__Paragraph
+        fontSize="tiny"
+        style={
+          Object {
+            "fontWeight": 200,
+          }
+        }
+      >
+        Octopus Energy Ltd is a company registered in England and Wales.
+      </Typography__Paragraph>
+      <Typography__Paragraph
+        fontSize="tiny"
+        style={
+          Object {
+            "fontWeight": 200,
+          }
+        }
+      >
+        Registered number: 09263424. Registered office: 33 Holborn, London, EC1N 2HT. Trading office: 20-24 Broadwick Street, London, W1F 8HT.
+      </Typography__Paragraph>
+      <Layout__VerticalSpacer
+        size="small"
+      />
+    </Layout__ContentWrapper>
+  </ColorBlock>
+</footer>
+`;

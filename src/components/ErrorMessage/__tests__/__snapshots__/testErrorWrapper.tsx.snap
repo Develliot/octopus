@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the with a retry button 1`] = `
+<styles__ErrorWrapper>
+  <Typography__H2>
+    Something broke!
+  </Typography__H2>
+  <Layout__VerticalSpacer
+    size="large"
+  />
+  <Typography__Paragraph>
+    This is an error message
+  </Typography__Paragraph>
+  <Layout__VerticalSpacer
+    size="large"
+  />
+  <Button
+    onClick={[MockFunction]}
+  >
+    Retry
+  </Button>
+  <Layout__VerticalSpacer
+    size="medium"
+  />
+  <Link
+    href="/"
+  >
+    <a>
+      <Button>
+        Home
+      </Button>
+    </a>
+  </Link>
+</styles__ErrorWrapper>
+`;
+
+exports[`renders the with an error message 1`] = `
+<styles__ErrorWrapper>
+  <Typography__H2>
+    Something broke!
+  </Typography__H2>
+  <Layout__VerticalSpacer
+    size="large"
+  />
+  <Typography__Paragraph>
+    This is an error message
+  </Typography__Paragraph>
+  <Layout__VerticalSpacer
+    size="large"
+  />
+  <Link
+    href="/"
+  >
+    <a>
+      <Button>
+        Home
+      </Button>
+    </a>
+  </Link>
+</styles__ErrorWrapper>
+`;

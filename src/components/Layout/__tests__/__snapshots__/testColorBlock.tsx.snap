@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly a set color 1`] = `
+<Layout__Block
+  color="pink"
+>
+  <Layout__VerticalSpacer
+    size="extraLarge"
+  />
+  <div>
+    Hello
+  </div>
+  <div>
+    World
+  </div>
+  <Layout__VerticalSpacer
+    size="extraExtraLarge"
+  />
+</Layout__Block>
+`;
+
+exports[`renders correctly with children 1`] = `
+<Layout__Block
+  color="blue"
+>
+  <Layout__VerticalSpacer
+    size="extraLarge"
+  />
+  <div>
+    Hello
+  </div>
+  <div>
+    World
+  </div>
+  <Layout__VerticalSpacer
+    size="extraExtraLarge"
+  />
+</Layout__Block>
+`;
+
+exports[`renders without padding 1`] = `
+<Layout__Block
+  color="blue"
+>
+  <div>
+    Hello
+  </div>
+  <div>
+    World
+  </div>
+</Layout__Block>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductOverview renders correctly with product 1`] = `
+<Link
+  as="/product/1"
+  href="/product/[id]"
+>
+  <styles__OverviewLink>
+    <styles__OverviewWrapper>
+      <Layout__Row>
+        <styles__OverviewImage
+          src="https://picsum.photos/500/500"
+        />
+        <styles__OverviewText>
+          Energy saving light bulb
+        </styles__OverviewText>
+      </Layout__Row>
+    </styles__OverviewWrapper>
+  </styles__OverviewLink>
+</Link>
+`;

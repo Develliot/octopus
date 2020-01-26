@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component properly when selected 1`] = `
+<styles__HeaderLinkItem>
+  <Link
+    href="/page"
+  >
+    <styles__NavLinkStyled
+      className=""
+      onClick={[Function]}
+      title="title"
+    >
+      <Typography__Paragraph
+        color="white"
+      >
+        title
+      </Typography__Paragraph>
+      <Layout__RowCenter>
+        <styles__HoverIndicator
+          selected={false}
+        />
+      </Layout__RowCenter>
+    </styles__NavLinkStyled>
+  </Link>
+</styles__HeaderLinkItem>
+`;
+
+exports[`renders the component properly with all of its props 1`] = `
+<styles__HeaderLinkItem>
+  <Link
+    href="/page"
+  >
+    <styles__NavLinkStyled
+      className=""
+      onClick={[Function]}
+      title="title"
+    >
+      <Typography__Paragraph
+        color="white"
+      >
+        title
+      </Typography__Paragraph>
+      <Layout__RowCenter>
+        <styles__HoverIndicator
+          selected={false}
+        />
+      </Layout__RowCenter>
+    </styles__NavLinkStyled>
+  </Link>
+</styles__HeaderLinkItem>
+`;

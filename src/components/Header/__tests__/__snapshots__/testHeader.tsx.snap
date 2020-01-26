@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders visible 1`] = `
+<styles__HeaderWrapper
+  visible={true}
+>
+  <styles__HeaderInner>
+    <Layout__RowStretch>
+      <styles__LogoSVGStyled />
+      <MenuButton
+        onClick={[Function]}
+      />
+    </Layout__RowStretch>
+    <styles__ResponsiveSpacer
+      menuOpen={false}
+    />
+    <nav>
+      <styles__Links
+        menuOpen={false}
+      >
+        <HeaderNavLink
+          onClick={[Function]}
+          selected={true}
+          title="Shop"
+          to="/"
+        />
+        <HeaderNavLink
+          onClick={[Function]}
+          selected={false}
+          title="Basket"
+          to="/basket"
+        />
+        <HeaderNavLink
+          onClick={[Function]}
+          selected={false}
+          title="Design System"
+          to="/designSystem"
+        />
+      </styles__Links>
+    </nav>
+  </styles__HeaderInner>
+</styles__HeaderWrapper>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuantityCounter renders correctly 1`] = `
+<styles__Counter>
+  <styles__CounterLabel
+    bold={true}
+    color="blueGrey"
+  >
+    QTY
+  </styles__CounterLabel>
+  <Layout__RowCenter>
+    <styles__CounterButton
+      aria-label="decrement item count"
+      onClick={[Function]}
+      title="decrement item count"
+    >
+      -
+    </styles__CounterButton>
+    <styles__CounterValue
+      aria-live="assertive"
+      bold={true}
+    >
+      1
+    </styles__CounterValue>
+    <styles__CounterButton
+      aria-label="increment item count"
+      onClick={[Function]}
+      title="increment item count"
+    >
+      +
+    </styles__CounterButton>
+  </Layout__RowCenter>
+</styles__Counter>
+`;

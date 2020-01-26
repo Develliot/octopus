@@ -1,0 +1,68 @@
+{
+    "name": "octopus",
+    "version": "1.0.0",
+    "description": "Octopus technical",
+    "main": "index.js",
+    "license": "ISC",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start -p 8080",
+        "deploy": "gcloud app deploy --version main",
+        "test": "jest",
+        "test:watch": "jest — watch",
+        "test:coverage": "jest — coverage"
+    },
+    "author": "Elliot Revan",
+    "dependencies": {
+        "babel-plugin-module-resolver": "^4.0.0",
+        "google-map-react": "^1.1.5",
+        "isomorphic-unfetch": "^3.0.0",
+        "next": "^9.2.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-markdown": "^4.3.1",
+        "styled-components": "5.0.0",
+        "swr": "^0.1.16",
+        "underscore": "^1.9.1"
+    },
+    "devDependencies": {
+        "babel-plugin-inline-react-svg": "^1.0.1",
+        "@babel/core": "^7.0.0",
+        "@types/enzyme": "^3.10.3",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "@types/google-map-react": "^1.1.4",
+        "@types/jest": "^24.9.1",
+        "@types/node": "^13.1.8",
+        "@types/react": "^16.9.18",
+        "@types/react-dom": "16.9.4",
+        "@types/styled-components": "^4.4.0",
+        "@types/underscore": "^1.9.4",
+        "babel-jest": "^24.9.0",
+        "babel-plugin-styled-components": "^1.8.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.1",
+        "enzyme-to-json": "^3.4.3",
+        "jest": "^25.1.0",
+        "prettier": "^1.19.1",
+        "ts-jest": "^25.0.0",
+        "typescript": "^3.7.5"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "engines": {
+        "node": "^12.0.0",
+        "npm": "^5.5.1",
+        "yarn": "^1.0.0"
+    }
+}

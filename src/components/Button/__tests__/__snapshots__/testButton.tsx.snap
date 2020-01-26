@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly with a different color 1`] = `
+<styles__ButtonStyled
+  color="pink"
+  isShiny={false}
+  onClick={[Function]}
+>
+  <div>
+    Hello
+  </div>
+</styles__ButtonStyled>
+`;
+
+exports[`Button renders correctly with children 1`] = `
+<styles__ButtonStyled
+  color="blue"
+  isShiny={false}
+  onClick={[Function]}
+>
+  <div>
+    Hello
+  </div>
+  <div>
+    World
+  </div>
+</styles__ButtonStyled>
+`;
+
+exports[`Button renders correctly with isShiny set 1`] = `
+<styles__ButtonStyled
+  color="blue"
+  isShiny={true}
+  onClick={[Function]}
+>
+  <div>
+    Hello
+  </div>
+</styles__ButtonStyled>
+`;

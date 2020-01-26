@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Energy saving light bulb",
+        "wattage": 25,
+        "packetSize": 4,
+        "price": 12.99,
+        "description": "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!",
+        "imageUrl": "https://picsum.photos/500/500",
+        "specifications": {
+            "brand": "Philips",
+            "weight": "77g",
+            "dimensions": "12.6x6.2x6.2cm",
+            "modelNumber": "E27 ES",
+            "colour": "Cool daylight"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Incandescent light bulb",
+        "wattage": 40,
+        "packetSize": 2,
+        "price": 4.99,
+        "description": "Available in 40 watts, 60 watts, burn your retinas out with these retro looking bad boys, heat your room and empty your wallet as the same time. Sit back and remember the good old days when light bulbs would frequently pop.",
+        "imageUrl": "https://picsum.photos/500/500",
+        "specifications": {
+            "brand": "Acme",
+            "weight": "64g",
+            "dimensions": "10.6x6.2x6.2cm",
+            "modelNumber": "E27 INC",
+            "colour": "warm white"
+        }
+    }
+]
