@@ -48,12 +48,12 @@ export const Product = ({
     const [state, setState] = useContext(BasketContext);
     const ref = useRef();
 
-    // turn has been added to basket off after a few seconds
+    // hide added to basket message after a few seconds
     useEffect(() => {
         if (hasBeenAddedToBasket) {
             setTimeout(() => {
                 // we need to check ref incase component unmounts during timeout
-                if (carouselRef?.current) {
+                if (ref?.current) {
                     setHasBeenAddedToBasket(false);
                 }
             }, 3000);

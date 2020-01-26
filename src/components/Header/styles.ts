@@ -49,9 +49,9 @@ export const Links = styled.ul`
     justify-content: flex-start;
 
     overflow: hidden;
-    transition: max-height 0.3s ease;
-    max-height: ${({ menuOpen }: { menuOpen: boolean }) =>
-        menuOpen ? '400px' : '0'};
+    transition: height 0.3s ease;
+    height: ${({ menuOpen }: { menuOpen: boolean }) =>
+        menuOpen ? '100vh' : '0'};
 
     @media screen and (min-width: ${({
             theme: {
@@ -60,7 +60,7 @@ export const Links = styled.ul`
         }) => small}) {
         flex-direction: row;
         list-style-type: none;
-        max-height: 400px;
+        height: auto;
         padding: 0;
     }
 `;
