@@ -6,17 +6,26 @@ import {
     ContentWrapper,
     VerticalSpacer,
 } from 'src/components/Layout';
-import { H1 } from 'src/components/Typography';
+import { H1, Span } from 'src/components/Typography';
 
 export const Basket = () => {
     const [state] = useContext(BasketContext);
+
+    const { basket } = state;
+    const productKeys: string[] = Object.keys(basket);
 
     return (
         <ColorBlock>
             <ContentWrapper>
                 <VerticalSpacer size='extraExtraLarge' />
                 <H1>Basket</H1>
-                <p>{JSON.stringify(state)}</p>
+                <VerticalSpacer size='medium' />
+                {!productKeys.length && <Span>Empty Basket</Span>}
+                {productKeys.map((key: string) => (
+                    <div key={key}>
+                        <Span>{`Product ID: ${key} Quantity ${basket[key]}`}</Span>
+                    </div>
+                ))}
             </ContentWrapper>
         </ColorBlock>
     );

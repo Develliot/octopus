@@ -6,7 +6,9 @@ export const BasketReducer = (
 ): BasketContextStateType => {
     const productId: number | undefined = action?.payload?.id;
     if (!productId) {
-        throw new Error('to add products id must exist in the payload');
+        throw new Error(
+            'to add or remove products the product id must exist in the payload'
+        );
     }
     //assume increment by one if no value is sent
     const value: number = action?.payload?.value || 1;

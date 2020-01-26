@@ -6,7 +6,15 @@ exports[`Header renders visible 1`] = `
 >
   <styles__HeaderInner>
     <Layout__RowStretch>
-      <styles__LogoSVGStyled />
+      <Link
+        href="/"
+      >
+        <a
+          title="home"
+        >
+          <styles__LogoSVGStyled />
+        </a>
+      </Link>
       <MenuButton
         onClick={[Function]}
       />

@@ -2,19 +2,25 @@
 
 exports[`renders the with a retry button 1`] = `
 <styles__ErrorWrapper>
-  <Typography__H2>
+  <Typography__H2
+    color="darkBlue"
+  >
     Something broke!
   </Typography__H2>
   <Layout__VerticalSpacer
     size="large"
   />
-  <Typography__Paragraph>
+  <Typography__Paragraph
+    color="darkBlue"
+  >
     This is an error message
   </Typography__Paragraph>
   <Layout__VerticalSpacer
     size="large"
   />
   <Button
+    color="pink"
+    isShiny={true}
     onClick={[MockFunction]}
   >
     Retry
@@ -25,8 +31,12 @@ exports[`renders the with a retry button 1`] = `
   <Link
     href="/"
   >
-    <a>
-      <Button>
+    <a
+      title="home"
+    >
+      <Button
+        isShiny={true}
+      >
         Home
       </Button>
     </a>
@@ -36,13 +46,17 @@ exports[`renders the with a retry button 1`] = `
 
 exports[`renders the with an error message 1`] = `
 <styles__ErrorWrapper>
-  <Typography__H2>
+  <Typography__H2
+    color="darkBlue"
+  >
     Something broke!
   </Typography__H2>
   <Layout__VerticalSpacer
     size="large"
   />
-  <Typography__Paragraph>
+  <Typography__Paragraph
+    color="darkBlue"
+  >
     This is an error message
   </Typography__Paragraph>
   <Layout__VerticalSpacer
@@ -51,8 +65,12 @@ exports[`renders the with an error message 1`] = `
   <Link
     href="/"
   >
-    <a>
-      <Button>
+    <a
+      title="home"
+    >
+      <Button
+        isShiny={true}
+      >
         Home
       </Button>
     </a>
