@@ -13,6 +13,11 @@ import { H1, H2, H3, Paragraph, Span } from 'src/components/Typography';
 import Button from 'src/components/Button';
 import QuantityCounter from 'src/components/QuantityCounter';
 import ErrorMessage from 'src/components/ErrorMessage';
+import Price from 'src/components/Price';
+import ProductOverview from 'src/components/ProductOverview';
+import Product from 'src/components/Product';
+
+import { ProductType } from 'src/types';
 
 import {
     TilesWrapper,
@@ -23,6 +28,24 @@ import {
 } from '../pageStyles/styles';
 
 const colorLabelList = Object.keys(colors);
+
+const mockProduct: ProductType = {
+    id: 1,
+    title: 'Energy saving light bulb',
+    wattage: 25,
+    packetSize: 4,
+    price: 12.99,
+    description:
+        'Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches instantly, no wait around with a warm start and flicker free features. Light up your life with this swirly wonder!',
+    imageUrl: 'https://picsum.photos/500/500',
+    specifications: {
+        brand: 'Philips',
+        weight: '77g',
+        dimensions: '12.6x6.2x6.2cm',
+        modelNumber: 'E27 ES',
+        colour: 'Cool daylight',
+    },
+};
 
 export const DesignSystem = () => {
     return (
@@ -168,15 +191,6 @@ export const DesignSystem = () => {
                     <VerticalSpacer size='large' />
                 </ColorBlock>
 
-                <ColorBlock>
-                    <ContentWrapper>
-                        <H3>Form inputs</H3>
-                        <VerticalSpacer size='medium' />
-                        <QuantityCounter minValue={1} onChange={() => {}} />
-                    </ContentWrapper>
-                    <VerticalSpacer size='extraExtraLarge' />
-                </ColorBlock>
-
                 <ColorBlock color='blue' padding={false}>
                     <VerticalSpacer size='extraLarge' />
                     <ContentWrapper>
@@ -189,7 +203,26 @@ export const DesignSystem = () => {
                             errorMessage='This is an error message'
                             retry={() => {}}
                         />
+
                         <VerticalSpacer size='large' />
+                        <H3 color='white'>Quantity counter</H3>
+                        <VerticalSpacer size='medium' />
+                        <QuantityCounter minValue={1} onChange={() => {}} />
+
+                        <VerticalSpacer size='large' />
+                        <H3 color='white'>Price</H3>
+                        <VerticalSpacer size='medium' />
+                        <Price price={20.44} />
+
+                        <VerticalSpacer size='large' />
+                        <H3 color='white'>ProductOverview</H3>
+                        <VerticalSpacer size='medium' />
+                        <ProductOverview product={mockProduct} />
+
+                        <VerticalSpacer size='large' />
+                        <H3 color='white'>Product</H3>
+                        <VerticalSpacer size='medium' />
+                        <Product product={mockProduct} />
                     </ContentWrapper>
                     <VerticalSpacer size='extraExtraLarge' />
                 </ColorBlock>

@@ -6,6 +6,7 @@ export const Counter = styled.div`
 `;
 
 export const CounterLabel = styled(Paragraph)`
+    max-width: 100%;
     text-align: center;
 `;
 
