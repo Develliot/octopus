@@ -28,10 +28,26 @@ export const BasketContext = React.createContext<BasketProviderType>([
 
 export const useBasketContext = () => useContext(BasketContext);
 
-// making a provider HOC here so I can keep all the state code in this
-// and not where ever this provider is used
 export const BasketProvider: FunctionComponent = ({ children }) => {
-    const [state, setState] = useState({ ...defaultState });
+    // TODO figure out middleware for dispatch saving to local storage
+    // lol probably should have used redux as I seem to be re-writing redux
+    // If this was a logged in user or even cookie based I would be pulling this from server anyway not local storage
+
+    // SSR safe check for existence of window first
+    // const localState =
+    //     typeof window !== undefined &&
+    //     window.localStorage.getItem('basketState')
+    //         ? window.localStorage.getItem('basketState')
+    //         : null;
+    // const stateFromStorage = localState ? JSON.parse(localState) : null;
+    // const initialState = stateFromStorage || {
+    //     ...defaultState,
+    // };
+
+    const [state, setState] = useState({
+        ...defaultState,
+    });
+
     return (
         <BasketContext.Provider value={[state, setState]}>
             {children}
