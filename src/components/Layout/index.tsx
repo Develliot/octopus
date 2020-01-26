@@ -27,9 +27,9 @@ export const ColorBlock: FunctionComponent<BlockProps> = ({
 }) => {
     return (
         <Block color={color || 'blue'}>
-            {padding && <VerticalSpacer size='extraLarge' />}
+            {padding && <VerticalSpacer size='large' />}
             {children}
-            {padding && <VerticalSpacer size='extraExtraLarge' />}
+            {padding && <VerticalSpacer size='large' />}
         </Block>
     );
 };

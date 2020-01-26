@@ -62,3 +62,27 @@ export const Pence = styled(Span)`
     vertical-align: top;
 `;
 
+export const SpecRow = styled.tr`
+    padding: 1em 0;
+    line-height: 2em;
+    border-bottom: ${({
+        theme: {
+            colors: { blue },
+        },
+    }) => `solid 0.3em ${blue}`};
+`;
+
+export const SpecTable = styled.table`
+    width: 100%;
+    color: ${({
+        theme: {
+            colors: { white },
+        },
+    }) => white};
+
+    ${SpecRow} {
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+`;
