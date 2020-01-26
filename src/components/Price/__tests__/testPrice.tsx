@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { Price } from '../Price';
+import { Price } from '../';
 import { Pence } from '../styles';
 
 describe('Price', () => {

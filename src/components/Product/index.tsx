@@ -12,7 +12,7 @@ import {
     ContentWrapper,
     RowStretch,
 } from 'src/components/Layout';
-import Price from './Price';
+import Price from 'src/components/Price';
 import QuantityCounter from 'src/components/QuantityCounter';
 
 import {
