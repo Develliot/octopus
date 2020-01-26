@@ -5,6 +5,7 @@ import {
     ColorBlock,
     ContentWrapper,
     VerticalSpacer,
+    PageWrapper,
 } from 'src/components/Layout';
 import { H1, Span } from 'src/components/Typography';
 
@@ -15,19 +16,21 @@ export const Basket = () => {
     const productKeys: string[] = Object.keys(basket);
 
     return (
-        <ColorBlock>
-            <ContentWrapper>
-                <VerticalSpacer size='extraExtraLarge' />
-                <H1>Basket</H1>
-                <VerticalSpacer size='medium' />
-                {!productKeys.length && <Span>Empty Basket</Span>}
-                {productKeys.map((key: string) => (
-                    <div key={key}>
-                        <Span>{`Product ID: ${key} Quantity ${basket[key]}`}</Span>
-                    </div>
-                ))}
-            </ContentWrapper>
-        </ColorBlock>
+        <PageWrapper>
+            <ColorBlock>
+                <ContentWrapper>
+                    <VerticalSpacer size='extraExtraLarge' />
+                    <H1>Basket</H1>
+                    <VerticalSpacer size='medium' />
+                    {!productKeys.length && <Span>Empty Basket</Span>}
+                    {productKeys.map((key: string) => (
+                        <div key={key}>
+                            <Span>{`Product ID: ${key} Quantity ${basket[key]}`}</Span>
+                        </div>
+                    ))}
+                </ContentWrapper>
+            </ColorBlock>
+        </PageWrapper>
     );
 };
 

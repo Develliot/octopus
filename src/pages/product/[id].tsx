@@ -2,7 +2,7 @@
 import { NextPageContext } from 'next';
 
 import data from 'src/data/lightBulbs.json';
-import { ColorBlock } from 'src/components/Layout';
+import { ColorBlock, PageWrapper } from 'src/components/Layout';
 import Product from 'src/components/Product';
 
 import { ProductType } from 'src/types';
@@ -23,9 +23,11 @@ export const ProductPage = ({ product, isError }: Props) => {
     }
 
     return (
-        <ColorBlock color='darkBlue' padding={false}>
-            <Product product={product} />
-        </ColorBlock>
+        <PageWrapper>
+            <ColorBlock color='darkBlue' padding={false}>
+                <Product product={product} />
+            </ColorBlock>
+        </PageWrapper>
     );
 };
 

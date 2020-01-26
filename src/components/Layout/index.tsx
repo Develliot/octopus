@@ -39,9 +39,9 @@ export const PageWrapper = styled.div`
     width: 100%;
     background-color: ${({
         theme: {
-            colors: { lightGrey },
+            colors: { blue },
         },
-    }) => lightGrey};
+    }) => blue};
 `;
 
 export const PageContent = styled.div`

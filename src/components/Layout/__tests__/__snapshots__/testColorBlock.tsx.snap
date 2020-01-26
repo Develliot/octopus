@@ -5,7 +5,7 @@ exports[`renders correctly a set color 1`] = `
   color="pink"
 >
   <Layout__VerticalSpacer
-    size="extraLarge"
+    size="large"
   />
   <div>
     Hello
@@ -14,7 +14,7 @@ exports[`renders correctly a set color 1`] = `
     World
   </div>
   <Layout__VerticalSpacer
-    size="extraExtraLarge"
+    size="large"
   />
 </Layout__Block>
 `;
@@ -24,7 +24,7 @@ exports[`renders correctly with children 1`] = `
   color="blue"
 >
   <Layout__VerticalSpacer
-    size="extraLarge"
+    size="large"
   />
   <div>
     Hello
@@ -33,7 +33,7 @@ exports[`renders correctly with children 1`] = `
     World
   </div>
   <Layout__VerticalSpacer
-    size="extraExtraLarge"
+    size="large"
   />
 </Layout__Block>
 `;
