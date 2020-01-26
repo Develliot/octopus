@@ -10,6 +10,7 @@ exports[`Header renders visible 1`] = `
         href="/"
       >
         <a
+          tabIndex={0}
           title="home"
         >
           <styles__LogoSVGStyled />

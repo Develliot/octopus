@@ -1,6 +1,8 @@
+import { memo } from 'react';
 import Link from 'next/link';
 
 import { Row } from 'src/components/Layout';
+import Price from 'src/components/Price';
 
 import {
     OverviewImage,
@@ -18,11 +20,15 @@ type Props = {
 export const ProductOverview = ({ product }: Props) => {
     return (
         <Link href='/product/[id]' as={`/product/${product.id}`}>
-            <OverviewLink>
+            <OverviewLink
+                tabIndex={0}
+                title={`link to product :${product.title}`}
+            >
                 <OverviewWrapper>
                     <Row>
                         <OverviewImage src={product.imageUrl} />
                         <OverviewText>{product.title}</OverviewText>
+                        <Price price={product.price} />
                     </Row>
                 </OverviewWrapper>
             </OverviewLink>
@@ -30,4 +36,4 @@ export const ProductOverview = ({ product }: Props) => {
     );
 };
 
-export default ProductOverview;
+export default memo(ProductOverview);

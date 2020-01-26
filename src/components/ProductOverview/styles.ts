@@ -4,7 +4,6 @@ import { H3 } from 'src/components/Typography';
 export const OverviewImage = styled.img`
     width: 3em;
     height: 3rem;
-    margin-right: 1rem;
 `;
 export const OverviewWrapper = styled.div`
     padding: 1em;
@@ -12,16 +11,21 @@ export const OverviewWrapper = styled.div`
 
 export const OverviewText = styled(H3)`
     transition: color 0.3s ease;
-    &:hover {
-        color: ${({
-            theme: {
-                colors: { pink },
-            },
-        }) => pink};
-    }
+    margin: 0 1em;
 `;
 
 export const OverviewLink = styled.a`
     text-decoration: none;
     cursor: pointer;
+
+    &:focus,
+    &:hover {
+        ${OverviewText} {
+            color: ${({
+                theme: {
+                    colors: { pink },
+                },
+            }) => pink};
+        }
+    }
 `;

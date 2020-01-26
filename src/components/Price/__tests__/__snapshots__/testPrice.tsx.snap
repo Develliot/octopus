@@ -2,9 +2,6 @@
 
 exports[`Price renders correctly with price 1`] = `
 <div>
-  <Layout__VerticalSpacer
-    size="medium"
-  />
   <styles__Pounds
     bold={true}
   >

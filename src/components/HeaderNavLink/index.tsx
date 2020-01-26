@@ -21,6 +21,7 @@ export const HeaderNavLink = ({
         <HeaderLinkItem>
             <Link href={to}>
                 <NavLinkStyled
+                    tabIndex={0}
                     title={title}
                     className={selected ? 'selected' : ''}
                     onClick={handleClick}

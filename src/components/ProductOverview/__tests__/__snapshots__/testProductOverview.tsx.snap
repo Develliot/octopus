@@ -5,7 +5,10 @@ exports[`ProductOverview renders correctly with product 1`] = `
   as="/product/1"
   href="/product/[id]"
 >
-  <styles__OverviewLink>
+  <styles__OverviewLink
+    tabIndex={0}
+    title="link to product :Energy saving light bulb"
+  >
     <styles__OverviewWrapper>
       <Layout__Row>
         <styles__OverviewImage
@@ -14,6 +17,9 @@ exports[`ProductOverview renders correctly with product 1`] = `
         <styles__OverviewText>
           Energy saving light bulb
         </styles__OverviewText>
+        <Memo(Price)
+          price={12.99}
+        />
       </Layout__Row>
     </styles__OverviewWrapper>
   </styles__OverviewLink>
