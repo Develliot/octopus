@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Span } from 'src/components/Typography';
+import { VerticalSpacer } from 'src/components/Layout';
 import { ProductQuantityType } from 'src/types';
 
 type Props = {
@@ -26,6 +27,7 @@ export const Basket = ({ basket }: Props) => {
                       </div>
                   ))
                 : null}
+            <VerticalSpacer size='medium' />
             <Span>Total cost: £{basketTotal(basket).toFixed(2)}</Span>
         </div>
     );
