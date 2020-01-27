@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basket renders correctly with basket items 1`] = `
+<div>
+  <div
+    key="1"
+  >
+    <Typography__Span>
+      Energy saving light bulb
+       : 
+      1
+    </Typography__Span>
+  </div>
+  <Typography__Span>
+    Total cost: £
+    12.99
+  </Typography__Span>
+</div>
+`;

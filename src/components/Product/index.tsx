@@ -1,4 +1,4 @@
-import { useState, useEffect, memo, useRef } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 import { useBasketContext } from 'src/contexts/BasketContext';
 import { BasketReducer } from 'src/reducers/BasketReducer';
@@ -47,19 +47,16 @@ export const Product = ({
     const [count, setCount] = useState(MIN_QUANTITY);
     const [hasBeenAddedToBasket, setHasBeenAddedToBasket] = useState(false);
     const [state, setState] = useBasketContext();
-    const ref = useRef();
 
     // hide added to basket message after a few seconds
+    // TODO we need to check ref incase component unmounts during timeout
     useEffect(() => {
         if (hasBeenAddedToBasket) {
             setTimeout(() => {
-                // we need to check ref incase component unmounts during timeout
-                if (ref) {
-                    setHasBeenAddedToBasket(false);
-                }
+                setHasBeenAddedToBasket(false);
             }, 3000);
         }
-    }, [ref, hasBeenAddedToBasket, setHasBeenAddedToBasket]);
+    }, [hasBeenAddedToBasket, setHasBeenAddedToBasket]);
 
     const handleQuantityChanged = (value: number) => {
         setCount(value);
