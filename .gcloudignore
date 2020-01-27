@@ -15,7 +15,7 @@
 
 # Next.js transient files
 node_modules/
-.next/cache
+#.next/cache
 
 # Other config and Files
 README.md
