@@ -1,6 +1,6 @@
 ## Demo:
 
-TBC
+https://octopus-ssr.appspot.com
 
 Hosted on GAE
 
