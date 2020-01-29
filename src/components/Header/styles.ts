@@ -14,9 +14,20 @@ export const HeaderWrapper = styled.header`
         visible ? `0` : `-100px`};
     opacity: ${({ visible }: { visible: boolean }) => (visible ? `1` : `0`)};
     z-index: 10;
+    border-top: ${({
+        theme: {
+            colors: { pink },
+        },
+    }) => `solid 0.001rem ${pink}`};
+    background-color: ${({
+        theme: {
+            colors: { darkBlue },
+        },
+    }) => darkBlue};
 `;
 
 export const HeaderInner = styled.div`
+    box-sizing: border-box;
     margin: 0 auto;
     background-color: ${({
         theme: {
@@ -29,6 +40,12 @@ export const HeaderInner = styled.div`
             globalPadding,
         },
     }) => `${small} ${globalPadding}`};
+    max-width: ${({
+        theme: {
+            breakpoints: { large },
+        },
+    }) => large};
+    margin: 0 auto;
     border-top: ${({
         theme: {
             colors: { pink },
