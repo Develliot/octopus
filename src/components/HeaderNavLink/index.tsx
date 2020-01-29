@@ -19,7 +19,7 @@ export const HeaderNavLink = ({
 
     return (
         <HeaderLinkItem>
-            <Link href={to}>
+            <Link href={to} passHref>
                 <NavLinkStyled
                     tabIndex={0}
                     title={title}

@@ -11,6 +11,9 @@ exports[`Basket renders correctly with basket items 1`] = `
       1
     </Typography__Span>
   </div>
+  <Layout__VerticalSpacer
+    size="medium"
+  />
   <Typography__Span>
     Total cost: £
     12.99

@@ -19,7 +19,7 @@ type Props = {
 
 export const ProductOverview = ({ product }: Props) => {
     return (
-        <Link href='/product/[id]' as={`/product/${product.id}`}>
+        <Link href='/product/[id]' as={`/product/${product.id}`} passHref>
             <OverviewLink
                 tabIndex={0}
                 title={`link to product :${product.title}`}

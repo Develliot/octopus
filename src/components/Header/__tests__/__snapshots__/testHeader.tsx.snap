@@ -8,6 +8,7 @@ exports[`Header renders visible 1`] = `
     <Layout__RowStretch>
       <Link
         href="/"
+        passHref={true}
       >
         <a
           tabIndex={0}

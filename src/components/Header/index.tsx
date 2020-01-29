@@ -39,7 +39,7 @@ export const Header = ({
         <HeaderWrapper visible={visible}>
             <HeaderInner>
                 <RowStretch>
-                    <Link href={urls.home}>
+                    <Link href={urls.home} passHref>
                         <a title='home' tabIndex={0}>
                             <LogoSVGStyled />
                         </a>

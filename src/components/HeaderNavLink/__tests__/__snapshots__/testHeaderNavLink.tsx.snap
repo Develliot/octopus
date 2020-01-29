@@ -4,6 +4,7 @@ exports[`renders the component properly when selected 1`] = `
 <styles__HeaderLinkItem>
   <Link
     href="/page"
+    passHref={true}
   >
     <styles__NavLinkStyled
       className=""
@@ -30,6 +31,7 @@ exports[`renders the component properly with all of its props 1`] = `
 <styles__HeaderLinkItem>
   <Link
     href="/page"
+    passHref={true}
   >
     <styles__NavLinkStyled
       className=""

@@ -4,6 +4,7 @@ exports[`ProductOverview renders correctly with product 1`] = `
 <Link
   as="/product/1"
   href="/product/[id]"
+  passHref={true}
 >
   <styles__OverviewLink
     tabIndex={0}
